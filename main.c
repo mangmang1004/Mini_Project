@@ -50,14 +50,14 @@ int main(void){
         else if (menu == 5){
             if(count == 0)
                 printf("=> 데이터 없음!\n");
-            //else 
-                //saveData(slist, curcount);
+            else 
+                saveData(slist, curcount);
         }
         else if (menu == 6){
             if(count == 0)
                 printf("=> 데이터 없음!\n");
             else 
-                 searchName(slist, curcount);
+                searchName(slist, curcount);
         }
     }
     printf("종료됨!\n");
