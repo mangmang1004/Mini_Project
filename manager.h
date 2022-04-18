@@ -19,4 +19,5 @@ int selectMenu();
 void listProducts(Product *s,int count); //등록되어 있는 제품의 전체 리스트를 출력하는 함수
 int selectDataNo(Product *s, int count); // 원하는 번호를 선택하는 함수
 void searchName(Product *s, int count); // 제품의 이름을 검색하는 함수
+void saveData(Product *s, int count); // File에 데이터를 저장하는 함수
 
