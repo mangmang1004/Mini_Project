@@ -98,3 +98,22 @@ int selectDataNo(Product *s, int count){
     return no;
 }
 
+void searchName(Product *s, int count){
+    int scount = 0;
+    char search [20];
+
+    printf("원하는 제품은?");
+    scanf("%s",search);
+
+    printf("No 제품명  제품의 설명  중량  판매가격  배송방법\n");
+    printf("================================\n");
+    for(int i=0; i < count; i++){
+        if(s[i].price == -1) continue;
+        if(strstr(s[i].name, search)){
+            readProduct(s[i]);
+            scount++;
+        }
+    }
+    if(scount == 0) printf("==> 검색결과 없음 !!");
+
+}
