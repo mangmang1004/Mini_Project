@@ -117,3 +117,17 @@ void searchName(Product *s, int count){
     if(scount == 0) printf("==> 검색결과 없음 !!");
 
 }
+
+void saveData(Product *s, int count){
+    FILE *fp;
+
+    fp = fopen("product.txt", "wt");
+    for(int i = 0; i< count; i++){
+        if(s[i].price == -1) continue;
+        fprintf(fp, "%s %3s %s", s[i].name, s[i].explan, s[i].weight);
+        if(s[i].method==1) printf("새벽배송\n");
+        else if(s[i].method==2) printf("택배배송\n");
+    }
+    fclose(fp);
+    printf("==> 저장됨 \n");
+}
